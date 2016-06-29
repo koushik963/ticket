@@ -35,7 +35,6 @@ Run this DB script in MySQL, it will create schema with some sample data.
 
 
 ### APIs:
-````
 
 -	Request: POST /spring-rest/api/availableSeats  ==> this API consumes set of level ids and produces number of seats available in the given levelids
 ````
