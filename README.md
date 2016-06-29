@@ -35,11 +35,10 @@ Run this DB script in MySQL, it will create schema with some sample data.
 
 
 ### APIs:
-````
 
 -	Request: POST /spring-rest/api/availableSeats  ==> this API consumes set of level ids and produces number of seats available in the given levelids
 ````
-curl -H "Content-Type: application/json" -X POST -d [1] http://localhost:8080/spring-rest/api/availableSeats
+curl -H "Content-Type: application/json" -X POST -d [1] http://localhost:8080/tickets/api/availableSeats
 
 Response:
 		6
@@ -47,7 +46,7 @@ Response:
 - 	Request: POST /spring-rest/api/findAndHoldSeats  ==> this API consumes and produces the json data as mentioned below.
 
 ````
-curl -H "Content-Type: application/json" -X POST -d {"{"noOfSeats":"1","minLevels":["1"],"maxLevels":["4"],"customerEmail":"test2@example.com"}"} http://localhost:8080/spring-rest/api/availableSeats
+curl -H "Content-Type: application/json" -X POST -d {"{"noOfSeats":"1","minLevels":["1"],"maxLevels":["4"],"customerEmail":"test2@example.com"}"} http://localhost:8080/tickets/api/availableSeats
  Response: 
 		{
 			"id": 10,
@@ -65,7 +64,7 @@ curl -H "Content-Type: application/json" -X POST -d {"{"noOfSeats":"1","minLevel
 	
 - 	Request: POST /spring-rest/api/reserveSeats  ==> this API consumes the below mentioned json data and produces the reservation code.
 ````
-curl -H "Content-Type: application/json" -X POST -d {"id":"8","customerEmail":"test2@example.com"} http://localhost:8080/spring-rest/api/availableSeats
+curl -H "Content-Type: application/json" -X POST -d {"id":"8","customerEmail":"test2@example.com"} http://localhost:8080/tickets/api/availableSeats
 - Response:
 	968986222226113
 ````
