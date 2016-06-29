@@ -46,7 +46,7 @@ Response:
 - 	Request: POST /spring-rest/api/findAndHoldSeats  ==> this API consumes and produces the json data as mentioned below.
 
 ````
-curl -H "Content-Type: application/json" -X POST -d {"{"noOfSeats":"1","minLevels":["1"],"maxLevels":["4"],"customerEmail":"test2@example.com"}"} http://localhost:8080/tickets/api/availableSeats
+curl -H "Content-Type: application/json" -X POST -d "{\"noOfSeats\":\"2\",\"minLevels\":[\"1\"],\"maxLevels\":[\"2\"],\"customerEmail\":\"test2@example.com\"}" http://localhost:8080/tickets/api/findAndHoldSeats
  Response: 
 		{
 			"id": 10,
@@ -64,7 +64,7 @@ curl -H "Content-Type: application/json" -X POST -d {"{"noOfSeats":"1","minLevel
 	
 - 	Request: POST /spring-rest/api/reserveSeats  ==> this API consumes the below mentioned json data and produces the reservation code.
 ````
-curl -H "Content-Type: application/json" -X POST -d {"id":"8","customerEmail":"test2@example.com"} http://localhost:8080/tickets/api/availableSeats
+curl -H "Content-Type: application/json" -X POST -d "{\"id\":\"8\",\"customerEmail\":\"test2@example.com\"}" http://localhost:8080/tickets/api/reserveSeats
 - Response:
 	968986222226113
 ````
